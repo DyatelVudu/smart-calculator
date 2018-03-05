@@ -24,14 +24,7 @@ class SmartCalculator {
     }
 
     pow(n) {
-        this.num = this.num.split(' ');
-        let last = '';
-        while((this.num[this.num.length - 1] != '+')&&(this.num[this.num.length - 1] != '-')&&(this.num[this.num.length - 1] != '/')&&(this.num[this.num.length - 1] != '*')&&(this.num.length!=0)){
-            last += this.num.pop();
-        }
-        this.num = this.num.join(' ');
-
-        this.num = `${this.num} ${Math.pow(+last,n)}`;
+        this.num = `${this.num} ** ${n}`;
         return this;
     }
 
